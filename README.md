@@ -26,11 +26,11 @@ The **Email Spoofing Detection System** is a **security analysis tool** designed
 
 ---
 
-## 👤 Maintainer
+## 👤 Details 
 
 * **Name:** M Bhargav
-* **GitHub:** [@MBhargavDev](https://github.com/MBhargavDev)
-* **Email (Optional):** bhargav.m.dev@example.com
+* **GitHub:** mbhargav53
+* **Email:mbhargavmbhargav53.com
 
 ---
 
