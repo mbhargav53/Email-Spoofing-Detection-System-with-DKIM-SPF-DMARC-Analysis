@@ -1,70 +1,266 @@
-# 🛡️ Email Spoofing Detection System with DMARC, DKIM, SPF Analysis
+# 🛡️ Email Spoofing Detection System
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) 
-[![GitHub stars](https://img.shields.io/github/stars/MBhargavDev/email-spoofing-detection.svg?style=social)](https://github.com/MBhargavDev/email-spoofing-detection/stargazers)
-
----
-
-## 📝 Description
-
-This section provides a detailed overview of the project.
-
-The **Email Spoofing Detection System** is a **security analysis tool** designed to **validate incoming email headers against established authentication protocols (DMARC, DKIM, and SPF) to accurately identify and flag phishing or spoofed emails before they reach the user's inbox.**
-
-### ✨ Key Features
-
-* **Comprehensive Header Analysis:** Parses email headers to extract `Return-Path`, `Received-SPF`, `DKIM-Signature`, and `Authentication-Results`.
-* **Protocol Validation Engine:** Implements logic to check the alignment and pass/fail status of **DMARC**, **DKIM**, and **SPF** records for the sending domain.
-* **Real-time Spoofing Score:** Assigns a risk score to each email based on authentication failures, providing a quantifiable measure of suspicion.
-* **Reporting & Logging:** Generates detailed logs of validation attempts and flags emails for quarantine or immediate deletion based on configuration.
-
-### 🛠 Technology Stack
-
-* **Core Logic:** Python (using libraries like `email` for parsing and `dnspython` for DNS lookups).
-* **Framework (Optional):** Flask for building a lightweight web-based reporting interface.
-* **Database:** SQLite for storing historical analysis data.
+> **Detect. Analyze. Protect.**
+>
+> A modern AI-powered cybersecurity platform for detecting email spoofing attacks using **SPF**, **DKIM**, and **DMARC** authentication analysis.
 
 ---
 
-## 👤 Details 
+## 🚀 Project Overview
 
-* **Name:** M Bhargav
-* **GitHub:** mbhargav53
-* **Email:mbhargavmbhargav53.com
+Email spoofing is one of the most common techniques used in phishing attacks and business email compromise (BEC). This project helps users identify potentially spoofed emails by performing advanced authentication checks and AI-assisted risk analysis.
+
+The system analyzes:
+
+✅ SPF (Sender Policy Framework)
+
+✅ DKIM (DomainKeys Identified Mail)
+
+✅ DMARC (Domain-based Message Authentication, Reporting & Conformance)
+
+✅ Email Headers
+
+✅ DNS Records
+
+✅ AI-Based Threat Classification
 
 ---
 
-## ⚙️ Installation & Usage
+## ✨ Key Features
 
-### Prerequisites
+### 🔍 DNS Security Analyzer
 
-* **Python 3.9+**
-* **pip** (Python package installer)
+* SPF Record Validation
+* DKIM Verification
+* DMARC Policy Analysis
+* MX Record Inspection
+* DNS Health Check
 
-### Installation Steps
+### 📧 Email Header Analyzer
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/MBhargavDev/email-spoofing-detection.git](https://github.com/MBhargavDev/email-spoofing-detection.git)
-    cd email-spoofing-detection
-    ```
+* Raw Header Parsing
+* Authentication Results Extraction
+* Sender Verification
+* Spoofing Detection Indicators
 
-2.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+### 🤖 AI Threat Intelligence
 
-3.  **Run the analysis tool:**
-    ```bash
-    # Example: Analyze a single email file (e.g., an .eml file)
-    python detection_tool.py --email-file path/to/suspicious.eml
-    
-    # Example: Run the monitoring service (if applicable)
-    python run_monitor.py
-    ```
-    
+* Risk Score Generation
+* Threat Classification
+* Security Recommendations
+* Suspicious Pattern Detection
+
+### 📊 Interactive Dashboard
+
+* Modern Cybersecurity UI
+* Real-Time Analysis Results
+* Risk Visualization Charts
+* Scan History Tracking
+
+### 📄 Smart Reporting
+
+* PDF Report Generation
+* Security Assessment Reports
+* Downloadable Scan Results
+
 ---
 
-## 📜 License
+## 🎯 How It Works
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+```text
+User Input
+    │
+    ▼
+Domain / Email Header
+    │
+    ▼
+DNS Record Retrieval
+    │
+ ┌───────┬───────┬───────┐
+ ▼       ▼       ▼
+SPF     DKIM    DMARC
+ │        │        │
+ └────────┼────────┘
+          ▼
+AI Risk Engine
+          ▼
+Threat Classification
+          ▼
+Dashboard & Reports
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### 🎨 Frontend
+
+* React.js
+* TypeScript
+* Tailwind CSS
+* Vite
+
+### ⚙️ Backend
+
+* Node.js
+* Express.js
+
+### 🗄️ Data Processing
+
+* DNS Lookup Services
+* Email Header Analysis
+* Security Rule Engine
+
+### 📈 Visualization
+
+* Recharts
+* Dynamic Dashboards
+
+### 📑 Reporting
+
+* jsPDF
+
+---
+
+## 🖥️ Dashboard Modules
+
+| Module             | Description                       |
+| ------------------ | --------------------------------- |
+| 🛡️ DNS Dashboard  | Analyze SPF, DKIM & DMARC         |
+| 📧 Header Analyzer | Detect spoofed headers            |
+| 🤖 AI Security Hub | Risk prediction & recommendations |
+| 📊 History Ledger  | Scan history tracking             |
+| 📄 PDF Reports     | Export detailed reports           |
+
+---
+
+## 📸 Screenshots
+
+Add screenshots here:
+
+```markdown
+/assets/dashboard.png
+/assets/header-analysis.png
+/assets/report-view.png
+```
+
+---
+
+## ⚡ Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/yourusername/email-spoofing-detection-system.git
+cd email-spoofing-detection-system
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Configure Environment
+
+Create a `.env` file:
+
+```env
+GEMINI_API_KEY=YOUR_API_KEY
+```
+
+### Run Application
+
+```bash
+npm run dev
+```
+
+---
+
+## 🧠 Security Analysis Metrics
+
+The system evaluates:
+
+* 🟢 SPF Status
+* 🟢 DKIM Status
+* 🟢 DMARC Enforcement
+* 🟢 DNS Integrity
+* 🟢 Sender Alignment
+* 🟢 Authentication Consistency
+* 🟢 Domain Trustworthiness
+* 🟢 Threat Indicators
+
+---
+
+## 📊 Sample Result
+
+```yaml
+Domain: example.com
+
+SPF: PASS
+DKIM: PASS
+DMARC: PASS
+
+Risk Score: 8/100
+
+Threat Level: LOW
+
+Status: SAFE
+
+Recommendation:
+Domain authentication is properly configured.
+```
+
+---
+
+## 🔮 Future Enhancements
+
+* 🌐 Domain Reputation Analysis
+* 🎣 Phishing URL Detection
+* 🔗 Threat Intelligence Feeds
+* 📨 Attachment Malware Scanning
+* ☁️ Cloud Deployment
+* 📈 Advanced Machine Learning Models
+* 🏢 Enterprise SOC Dashboard
+
+---
+
+## 🎓 Academic Contribution
+
+This project demonstrates practical implementation of:
+
+* Cybersecurity Principles
+* Email Authentication Protocols
+* AI-Based Threat Detection
+* Full Stack Development
+* DNS Security Analysis
+
+---
+
+## 👨‍💻 Author
+
+**M Bhargav**
+
+🎓 B.Tech – Computer Science & Engineering
+
+🏫 KL University
+
+💡 Cybersecurity & Full Stack Development Enthusiast
+
+---
+
+## ⭐ Support
+
+If you found this project useful:
+
+🌟 Star the repository
+
+🍴 Fork the project
+
+📢 Share with others
+
+---
+
+## 🔐 "Trust Every Email? Verify First."
+
+### Built with ❤️ for Cybersecurity & Secure Communication
